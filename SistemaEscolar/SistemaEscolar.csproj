@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE3227EC-DF38-48FA-80B8-78A1CE3BCDBF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaEscolar</RootNamespace>
+    <AssemblyName>SistemaEscolar</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Modelos\AlunoModel.cs" />
+    <Compile Include="View\CadastraDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastraDisciplina.Designer.cs">
+      <DependentUpon>CadastraDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CadastraDisciplinasProfessores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastraDisciplinasProfessores.Designer.cs">
+      <DependentUpon>CadastraDisciplinasProfessores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CadastraFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastraFuncionario.Designer.cs">
+      <DependentUpon>CadastraFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CadastraProfessores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastraProfessores.Designer.cs">
+      <DependentUpon>CadastraProfessores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CadastrarAlunosTurmas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastrarAlunosTurmas.Designer.cs">
+      <DependentUpon>CadastrarAlunosTurmas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CadastraSerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastraSerie.Designer.cs">
+      <DependentUpon>CadastraSerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CadastraTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastraTurma.Designer.cs">
+      <DependentUpon>CadastraTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CadastroAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastroAlunos.Designer.cs">
+      <DependentUpon>CadastroAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EfetuaMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EfetuaMatricula.Designer.cs">
+      <DependentUpon>EfetuaMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LancarFrequencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LancarFrequencia.Designer.cs">
+      <DependentUpon>LancarFrequencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LancarNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LancarNotas.Designer.cs">
+      <DependentUpon>LancarNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaInicial.Designer.cs">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaLogin.Designer.cs">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\CursoModel.cs" />
+    <Compile Include="Modelos\DisciplinaModel.cs" />
+    <Compile Include="Modelos\FuncionarioModel.cs" />
+    <Compile Include="Modelos\PessoaModel.cs" />
+    <Compile Include="Modelos\ProfessorModel.cs" />
+    <Compile Include="Modelos\TurmaModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\CadastraDisciplina.resx">
+      <DependentUpon>CadastraDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CadastraDisciplinasProfessores.resx">
+      <DependentUpon>CadastraDisciplinasProfessores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CadastraFuncionario.resx">
+      <DependentUpon>CadastraFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CadastraProfessores.resx">
+      <DependentUpon>CadastraProfessores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CadastrarAlunosTurmas.resx">
+      <DependentUpon>CadastrarAlunosTurmas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CadastraSerie.resx">
+      <DependentUpon>CadastraSerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CadastraTurma.resx">
+      <DependentUpon>CadastraTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CadastroAlunos.resx">
+      <DependentUpon>CadastroAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EfetuaMatricula.resx">
+      <DependentUpon>EfetuaMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LancarFrequencia.resx">
+      <DependentUpon>LancarFrequencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LancarNotas.resx">
+      <DependentUpon>LancarNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaInicial.resx">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaLogin.resx">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inclusao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alteracao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclusao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consulta.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
